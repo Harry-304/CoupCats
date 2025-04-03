@@ -251,9 +251,9 @@ main <- main %>%
          "trsm_inflows"=ST.INT.RCPT.CD, "trsm_outflows"=ST.INT.XPND.CD, "gini"=SI.POV.GINI)
 # Merge the variables with base_data
   base_data <- base_data %>%
-    left_join(main, by = c("ccode", "year"))
+    left_join(main, by = c("ccode", "year", "month"))
   rm(main)
-  
+
 ###############################################################################################
 #Checked through above and ready to produce .csv and upload to github
 #clean up if needed and export
